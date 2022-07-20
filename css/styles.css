@@ -35,8 +35,13 @@ ul {
   list-style: none;
 }
 
+img {
+  display: block;
+}
+
 .link {
   text-decoration: none;
+  display: inline-block;
 }
 
 .button {
@@ -79,11 +84,20 @@ ul {
 }
 
 /*-------HEADER--------*/
-header {
+.header {
   border-bottom: 1px solid #ececec;
   padding: 24px 0 25px;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  gap: 50px;
+}
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -94,12 +108,18 @@ header {
 
 .header-logo {
   color: #000000;
+  margin-right: 93px;
 }
 
 .logo-accent {
   color: var(--accent-color);
 }
 
+.contact-nav {
+  display: flex;
+  margin-left: auto;
+  gap: 50px;
+}
 .site-nav-item,
 .contact-nav-item {
   font-weight: 500;
@@ -145,9 +165,7 @@ header {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  display: block;
   letter-spacing: 0.06em;
   color: #ffffff;
   background-color: var(--accent-color);
@@ -165,7 +183,7 @@ header {
 
 .features-list {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 .features-item {
@@ -197,7 +215,7 @@ header {
 
 .services-list {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 /* Team */
 .team {
@@ -209,12 +227,15 @@ header {
 
 .team-list {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 .team-members {
-  outline: 2px solid blue; /* temporary */
+  /* outline: 2px solid blue; temporary */
   background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-members-name {
   font-weight: 500;
@@ -283,12 +304,10 @@ footer {
 
 /* portfolio */
 .portfolio-menu {
-  max-width: 611px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 34px;
 }
 .portfolio-menu-btn {
   font-weight: 500;
@@ -312,14 +331,16 @@ footer {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 .portfolio-item {
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
 }
-.portfolio-examples {
-  margin-bottom: 30px;
+
+.portfolio-examples:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 
 .portfolio-examples-title {
@@ -327,8 +348,8 @@ footer {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-title-color);
-  margin-bottom: 4px;
 }
+
 .portfolio-examples-type {
   font-size: 16px;
   line-height: 1.88;
