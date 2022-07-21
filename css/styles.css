@@ -37,11 +37,13 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
   text-decoration: none;
-  display: inline-block;
+  display: block;
 }
 
 .button {
@@ -55,11 +57,10 @@ img {
 }
 
 .container {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  /* outline: 2px solid red; temporary */
+  outline: 2px solid red; /* temporary */
 }
 
 .visually-hidden {
@@ -94,6 +95,10 @@ img {
   align-items: center;
 }
 
+.site-nav-container {
+  display: flex;
+  align-items: center;
+}
 .site-nav {
   display: flex;
   gap: 50px;
@@ -186,10 +191,6 @@ img {
   gap: 30px;
 }
 
-.features-item {
-  max-width: 270px;
-}
-
 .features-list-title {
   font-size: 14px;
   line-height: 1.14;
@@ -203,6 +204,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+  max-width: 270px;
 }
 /* Services */
 .services {
@@ -270,10 +272,10 @@ footer {
 
 .footer-logo {
   color: #ffffff;
+  margin-bottom: 20px;
 }
 .contacts-list {
   font-style: normal;
-  margin-top: 20px;
 }
 .contacts-list .link {
   color: #ffffff;
@@ -305,9 +307,9 @@ footer {
 /* portfolio */
 .portfolio-menu {
   display: flex;
-  gap: 30px;
+  gap: 8px;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .portfolio-menu-btn {
   font-weight: 500;
@@ -319,7 +321,6 @@ footer {
   background-color: var(--secondary-bgc);
   border: none;
   padding: 6px 22px;
-  margin-bottom: 16px;
 }
 
 .portfolio-menu-btn:hover,
@@ -337,6 +338,7 @@ footer {
 .portfolio-item {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .portfolio-examples:nth-last-child(-n + 3) {
@@ -348,6 +350,7 @@ footer {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-title-color);
+  margin-bottom: 4px;
 }
 
 .portfolio-examples-type {
